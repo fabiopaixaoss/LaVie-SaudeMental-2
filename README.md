@@ -1,37 +1,30 @@
-La Vie - Saúde Mental
+<h1>La Vie - Saúde Mental</h1>
 
-Terceiro desafio em equipe do Gama Academy, com o objetivo de colocar em prática os conhecimentos de Back-end, criando uma API do zero utilizando Node.js, Express e Banco de dados MySQL.
-Intruções para utilizar o projeto
+<p>Desafio 3 - Gama Academy: com o objetivo de colocar em prática os conhecimentos de backend, foi proposto a criação de uma API do zero, com o CRUD (create, read, update e delete) completo, utilizando o Node.Js, Express e Banco de Dados MySQL.</p>
 
-    Clone o repositorio para a sua máquina utilizando o git clone
-    No terminal, dentro do projeto, instale todos os pacotes e depêndencias usando o npm install
-    Crie o banco de dados e as tabelas utilizando os comandos da pasta /sql
+Instruções de Uso:
 
-Objetivos de estudo
+    1 - Clone o repositório para a sua máquina utilizando o comando git clone.
+    2 - No terminal, dentro do projeto, instale todos os pacotes e depêndencias usando o npm install
+    3 - Crie o banco de dados (use lavie) e as tabelas, conforme orientado na pasta ./src/models.
 
-    Boas práticas em relação ao uso de JS e organização do projeto usando os princípios do MVC.
-    Construir uma API utilizando boas práticas em Node.js e Express.
-    Validação dos dados que entram na API e feedback de erros para os usuários.
-    Criar um banco de dados do zero, desde a estrutura DER a criação de tabelas com SQL.
-    Conectar e manipular banco de dados através do Sequelize.
+   O que se espera após o desafio:
 
-Tecnologias utilizadas
+    1 - Explicar o que é uma API e como utilizá-la;
+    2 - Construir uma API utilizando boas práticas em Node.js e Express;
+    3 - Criar um banco de dados do zero, desde a estrutura DER a criação de tabelas com SQL;
+    4 - Conectar e manipular banco de dados através do Sequelize.
 
-    Javascript
-    Node.js
-    Express
-    Sequelize
-    MySQL
+Tecnologias utilizadas:
+
+    JavaScript, Node.Js, Express, Sequelize e MySQL. Além disso, utilizamos uma funcionalidade para criptografar a senha cadastrada pelo psicólogo e, quando o mesmo for fazer o login, será retornado um Token validando os dados. Usamos: Crypto e JWT.
 
 DOCUMENTAÇÃO
 
-Link: https://documenter.getpostman.com/view/26915318/2s93Xx1jf5
-Autores
+Link: https://documenter.getpostman.com/view/27232490/2s93eePoiJ
 
-Grupo 6
+Autores (Grupo 2): 
 
-    Neylor Felipe
-    Samuel Lara
-    Gleyciane Gonçalves
-    Matheus Ellenberger
-
+    Fábio Paixão
+    Fábio Lúcio 
+    Willames Cavalcante
