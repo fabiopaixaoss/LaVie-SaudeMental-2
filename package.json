@@ -1,0 +1,36 @@
+{
+  "name": "lavie-clinica",
+  "version": "1.0.0",
+  "description": "API que permite criar registros de psicólogos, pacientes e prontuários.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabiopaixaoss/laVie-saudeMental.git"
+  },
+  "keywords": [
+    "API",
+    "cadastro",
+    "psicologos",
+    "pacientes",
+    "prontuarios"
+  ],
+  "author": "Fábio Paixão, Fábio Lúcio, Willames Cavalcante",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabiopaixaoss/laVie-saudeMental/issues"
+  },
+  "homepage": "https://github.com/fabiopaixaoss/laVie-saudeMental#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.3.0",
+    "sequelize": "^6.31.1",
+    "uuid": "^9.0.0"
+  }
+}
