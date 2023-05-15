@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fabiopaixaoss/laVie-saudeMental.git"
+    "url": "https://github.com/fabiopaixaoss/LaVie-SaudeMental-2.git"
   },
   "keywords": [
     "API",
@@ -20,9 +20,9 @@
   "author": "Fábio Paixão, Fábio Lúcio, Willames Cavalcante",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fabiopaixaoss/laVie-saudeMental/issues"
+    "url": "https://github.com/fabiopaixaoss/LaVie-SaudeMental-2/issues"
   },
-  "homepage": "https://github.com/fabiopaixaoss/laVie-saudeMental#readme",
+  "homepage": "https://github.com/fabiopaixaoss/LaVie-SaudeMental-2#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
