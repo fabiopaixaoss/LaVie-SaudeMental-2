@@ -9,7 +9,8 @@ const Paciente = require('../src/models/Paciente'); // Importando a models dos P
 const Atendimentos = require('../src/models/Atendimentos'); // Importando a models de Atendimentos.
 const verifyPsicologo = require('./middlewares/verificarPsicoID'); // Importando o middleware verificarPsicoID.
 const verifyPaciente = require('../src/middlewares/verificarPacienteID') // Importando o middleware verifyPaciente.
-const verifyAtendimentosID = require('./middlewares/verifyAtendimentoID') // Importando o middleware verifyUserID.
+const verifyAtendimentosID = require('./middlewares/verifyAtendimentoID'); // Importando o middleware verifyUserID.
+const { UUID } = require('sequelize');
 require('dotenv').config()
 
 const app = express(); // Atribuindo as funcionalidade do Express para a const app.
@@ -244,17 +245,19 @@ app.get('/atendimentos', getAtendimentos);
 const getAtendimentosID = async (req, res) => {
   try {
     const { id } = req.params;
-    const atendimentos = await atendimentos.findByPk(id);
-    if (!atendimentos) {
+    const atendimento = await Atendimentos.findByPk(id); // Corrigido para usar o modelo Atendimento
+    if (!atendimento) {
       return res.status(404).json({ message: 'Atendimento não encontrado' });
     }
-    res.status(200).json({ message: 'Atendimento encontrado', atendimentos });
+    res.status(200).json({ message: 'Atendimento encontrado', atendimento });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Erro ao buscar atendimentos' });
   }
 };
+
 app.get('/atendimentos/:id', verifyAtendimentosID, getAtendimentosID);
+
 
 // Criando rota de POST para cadastrar Atendimentos na database.
 const cadastrarAtendimento = async (req, res) => {
@@ -262,22 +265,25 @@ const cadastrarAtendimento = async (req, res) => {
     return res.status(400).json({ message: "Corpo da requisição inválido!" });
   }
 
-  const { paciente_id, data_atendimento, observacao } = req.body;
+  const { data_atendimento, observacao } = req.body;
 
   try {
+    const id = uuidv4(); // Gerar um novo ID usando UUID
+
     const paciente = await Atendimentos.create({
-      paciente_id,
+      paciente_id: uuidv4(),
       data_atendimento,
       observacao
     });
-    
+
     res.status(200).json({ message: 'Atendimento cadastrado com sucesso!', paciente });
-  } 
-  catch (error) {
+  } catch (error) {
     res.status(400).json({ message: `Ocorreu um erro na requisição! ${error}` });
   }
 };
+
 app.post('/atendimentos', cadastrarAtendimento);
+
 // Fim das rotas dos Atendimentos. //
 
 

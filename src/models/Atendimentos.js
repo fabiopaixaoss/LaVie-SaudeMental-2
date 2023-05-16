@@ -4,10 +4,9 @@ const sequelize = require('../database/db'); // Importando a conexão com o banc
 // Criando e definindo a tabela de atendimentos
 const Atendimento = sequelize.define('Atendimento', {
   paciente_id: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     primaryKey: true,
     allowNull: false,
-    autoIncrement: true
   },
 
   data_atendimento: {
